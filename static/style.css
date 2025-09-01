@@ -1,0 +1,82 @@
+/* Using Tailwind for most styles, this is for custom enhancements */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar for chat window */
+#chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-window::-webkit-scrollbar-track {
+    background: #f1f5f9; /* slate-100 */
+}
+
+#chat-window::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* slate-300 */
+    border-radius: 4px;
+}
+
+#chat-window::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* slate-400 */
+}
+
+/* For auto-resizing textarea */
+#user-input {
+    min-height: 48px; /* Match button height */
+}
+
+/* Markdown prose styling for AI responses */
+.prose {
+    line-height: 1.6;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.prose p {
+    margin-bottom: 1em;
+}
+
+.prose strong {
+    font-weight: 600;
+}
+
+.prose ul, .prose ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1em;
+}
+
+.prose li {
+    margin-bottom: 0.25em;
+}
+
+/* Animation for typing indicator */
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #475569; /* slate-600 */
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1.0);
+    }
+}
